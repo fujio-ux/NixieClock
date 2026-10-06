@@ -31,7 +31,7 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 2. パソコンから元のファームの更新機能に送ります。
 
    ```bash
-   curl -F "update=@NixieClock-1.6.1.bin" http://<時計のIP>/update_ota
+   curl -F "update=@NixieClock-1.6.2.bin" http://<時計のIP>/update_ota
    ```
 
    元のファームが書き込める大きさは約 500KB までです。このファームは約 460KB です。
@@ -47,7 +47,7 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 2. スマホでその Wi-Fi につなぎます。パスワードは **`password`** です。
 3. 設定画面が自動で開きます（開かなければブラウザで `http://192.168.4.1/wifi`）。
 4. つなぎたい Wi-Fi を一覧から選び（または名前を入力）、その Wi-Fi のパスワードを入れます。
-5. 「確認」欄に Wi-Fi 設定のパスワード（初期値 `password`）を入れて「保存してつなぎ直す」を押します。
+5. 「保存してつなぎ直す」を押します。「NixieClock-Setup」から開いたときは、Wi-Fi 設定のパスワードは聞かれません。
 6. 時計が再起動して、その Wi-Fi につなぎます。つながらなければ、また「NixieClock-Setup」が出ます。
 
 **初期パスワード `password` は誰でも知っているので、変えることをおすすめします。**
@@ -57,7 +57,10 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 - ファーム更新（`/update`、ユーザー `admin`）
 
 設定用 Wi-Fi「NixieClock-Setup」のパスワードは `password` で固定です（1.6.1 から）。
-時計を人に譲るときは、Wi-Fi 設定のパスワードを `password` に戻してから渡してください。
+また「NixieClock-Setup」から開いた設定画面では、Wi-Fi 設定のパスワードを聞きません（1.6.2 から）。
+人から譲り受けた時計でも、前の持ち主のパスワードを知らずに Wi-Fi と新しいパスワードを設定できます。
+その代わり、時計が「NixieClock-Setup」を出している間は、近くにいる人も接続先を変えられます。
+家の Wi-Fi から設定画面を開いたときは、Wi-Fi 設定のパスワードが必要です。
 
 家の Wi-Fi が一時的に切れて「NixieClock-Setup」になっても、スマホがつながっていなければ 3 分ごとに元の Wi-Fi を試し、つながれば自動で戻ります。
 
