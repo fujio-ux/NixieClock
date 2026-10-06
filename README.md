@@ -93,3 +93,7 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 
 - このファームは製品の販売元とは関係ありません。改造は保証の対象外になることがあります。
 - 書き込みや使用で起きた故障・損害について、作者は責任を負いません。
+
+## ライセンス
+
+[MIT License](LICENSE)
