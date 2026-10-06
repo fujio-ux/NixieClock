@@ -4,7 +4,7 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 画面をニキシー管の時計と、ニュースが流れる電光掲示板に変えます。
 
 - **ニキシー管 8 本で `時:分:秒`**。毎分 0 秒に全部の数字がランダムに回り、左から順に止まります（ダイバージェンスメーター風）
-- **上段に日付**：「10月5日(月)」、祝日は「11月23日(勤労感謝の日)」のように祝日名
+- **上段に時計の IP アドレス**、その下に**日付**：「10月5日(月)」、祝日は「11月23日(勤労感謝の日)」のように祝日名
 - **下段に LED 電光掲示板**：ニュースの見出しが右から左へ流れます（朝日新聞／日経ビジネスを選べます）
 - 夜間（初期値 23 時〜7 時）は画面を暗くします
 - Wi-Fi は本体が出す Wi-Fi「NixieClock-Setup」につないで、スマホから設定できます
@@ -31,7 +31,7 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 2. パソコンから元のファームの更新機能に送ります。
 
    ```bash
-   curl -F "update=@NixieClock-1.5.0.bin" http://<時計のIP>/update_ota
+   curl -F "update=@NixieClock-1.6.1.bin" http://<時計のIP>/update_ota
    ```
 
    元のファームが書き込める大きさは約 500KB までです。このファームは約 460KB です。
@@ -50,12 +50,14 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 5. 「確認」欄に Wi-Fi 設定のパスワード（初期値 `password`）を入れて「保存してつなぎ直す」を押します。
 6. 時計が再起動して、その Wi-Fi につなぎます。つながらなければ、また「NixieClock-Setup」が出ます。
 
-**初期パスワード `password` は誰でも知っているので、必ず変えてください。**
-設定画面の「Wi-Fi 設定のパスワードを変える」で変えると、次の 3 つが同じパスワードになります（8 文字以上）。
+**初期パスワード `password` は誰でも知っているので、変えることをおすすめします。**
+設定画面の「Wi-Fi 設定のパスワードを変える」で変えると、次の 2 つが同じパスワードになります（8 文字以上）。
 
 - Wi-Fi 設定画面の確認欄
-- 設定用 Wi-Fi「NixieClock-Setup」
 - ファーム更新（`/update`、ユーザー `admin`）
+
+設定用 Wi-Fi「NixieClock-Setup」のパスワードは `password` で固定です（1.6.1 から）。
+時計を人に譲るときは、Wi-Fi 設定のパスワードを `password` に戻してから渡してください。
 
 家の Wi-Fi が一時的に切れて「NixieClock-Setup」になっても、スマホがつながっていなければ 3 分ごとに元の Wi-Fi を試し、つながれば自動で戻ります。
 
