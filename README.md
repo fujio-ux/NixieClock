@@ -18,6 +18,14 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 
 スマホのカメラを QR コードに向け、出てきた「NixieClock-Setup に接続」を押します。パスワードの入力は要りません。
 
+<img src="docs/images/scan_qr.jpg" width="240" alt="iPhone のカメラで時計の QR コードを読んだところ（ネットワーク NixieClock-Setup の案内が出る）">
+
+（iPhone の標準のカメラで読んだところ。黄色い「ネットワーク "NixieClock-Setup"」を押すとつながります）
+
+- **iPhone**：標準の「カメラ」で読めます。
+- **Android**：Android 10 以降の多くの機種は、標準のカメラか Google レンズで読むと、そのままつなげます。
+  カメラが QR コードに対応していない機種では、Google レンズや QR コード読み取りアプリを使ってください。
+
 - つなぐと、設定画面が自動で開きます。
 - 開かないときは、ブラウザで **`http://192.168.4.1/wifi`** を開いてください。
 - QR コードを読めないときは、スマホの「設定」→「Wi-Fi」で **NixieClock-Setup** を選び、パスワード **`password`** を入れてください。
@@ -41,6 +49,13 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 
 うまくつながらないときは、30 秒ほどでまた QR コードが出るので、2 からやり直してください。
 家の Wi-Fi が一時的に切れて QR コードの画面になっても、スマホがつながっていなければ 3 分ごとに家の Wi-Fi を試し、つながれば自動で元に戻ります。
+
+## 動いている様子
+
+<img src="docs/images/demo.gif" width="360" alt="時計が動いている様子（毎分 0 秒に数字が回り、下に地震情報が流れる）">
+
+毎分 0 秒にニキシー管の数字がランダムに回ってから止まり、下の電光掲示板に地震情報が流れます。
+（[MP4 で見る](docs/media/demo.mp4)）
 
 ## 使い方（設定画面）
 
