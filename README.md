@@ -10,7 +10,8 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 
 ### 1. 時計の電源を入れる
 
-30 秒ほど待つと、時計が自分で Wi-Fi「**NixieClock-Setup**」を出し、画面に QR コードが出ます。
+画面に「**Wi-Fiにつないでいます**」と、くるくる回る印が出ます（1.11.0〜）。そのまま待ってください。
+初めての設定（まだ Wi-Fi を保存していない）なら約 10 秒、保存した Wi-Fi が見つからないときは最大 30 秒で、時計が自分で Wi-Fi「**NixieClock-Setup**」を出し、画面に QR コードが出ます。
 
 <img src="docs/images/01_clock.png" width="240" alt="設定用 Wi-Fi を出しているときの時計の画面（QR コード）">
 
@@ -108,10 +109,10 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 2. パソコンから元のファームの更新機能に送ります。
 
    ```bash
-   curl -F "update=@NixieClock-1.9.0.bin" http://<時計のIP>/update_ota
+   curl -F "update=@NixieClock-1.11.0.bin" http://<時計のIP>/update_ota
    ```
 
-   元のファームが書き込める大きさは約 500KB までです。このファームは約 440KB です。
+   元のファームが書き込める大きさは約 500KB までです。このファームは約 460KB です。
 3. 10 秒ほどで再起動します。家の Wi-Fi はまだ知らないので、上の「[まずは最初の設定](#まずは最初の設定wi-fi)」に進みます。
 
 ### このファームから（2 回目以降）
@@ -124,10 +125,10 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 パソコンからなら、次の 1 行でも書き込めます。
 
 ```bash
-curl -F "firmware=@NixieClock-1.9.0.bin" http://<時計のIP>/update
+curl -F "firmware=@NixieClock-1.11.0.bin" http://<時計のIP>/update
 ```
 
-1.8.0 から 1.9.0 に書き換えたときは、設定も家の Wi-Fi もそのまま残ります（1.6.x 以前から書き換えたときは、明るさ・ニュースなどの設定が初期値に戻ります）。
+1.8.0 以降から 1.11.0 に書き換えたときは、設定も家の Wi-Fi もそのまま残ります（1.6.x 以前から書き換えたときは、明るさ・ニュースなどの設定が初期値に戻ります）。
 
 ## 通信について
 
