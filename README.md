@@ -5,6 +5,8 @@ Smart Weather Clock（SD Pro、[JUZIPi-tech/SD_PRO](https://github.com/JUZIPi-te
 
 ## まずは最初の設定（Wi-Fi）
 
+印刷用：[はじめての設定と使い方（A4 1 枚の PDF）](docs/setup-guide.pdf)
+
 スマホ 1 台あれば、数分で終わります。パスワードの入力はほとんど要りません。
 まだこのファームを時計に書き込んでいない場合は、先に下の「[書き込み方](#書き込み方)」を済ませてください。
 
